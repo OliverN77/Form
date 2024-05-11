@@ -1,0 +1,134 @@
+* {
+    font-family: sans-serif;
+  }
+  
+  body {
+    background:url("https://wallpapersmug.com/download/1920x1080/b57166/minimal-mountains.jpg") center/cover no-repeat fixed;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+  }
+
+  /*----HEADER----*/
+
+  .container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+  }
+  
+  span {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 15px 0;
+    font-family: montserrat;
+    font-weight: 900;
+    z-index: 10;
+  }
+  
+  header {
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 15px 0;
+    font-family:montserrat;
+    font-weight: 900;
+  }
+  
+  /*----FORM----*/
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius:30px;
+  }
+  
+  .input-field .input {
+    height: 45px;
+    width: 87%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    padding: 0 0 0 42px;
+    background:#000;
+  }
+  
+  input::placeholder{
+    font-family: montserrat;
+    font-weight: 500;
+  }
+  
+  .input-field .value {
+    height: 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    color: #000;
+    padding: 0 0 0 42px;
+    background: #fff;
+    text-align: center;
+    padding-left: 0;
+    font-family: montserrat;
+    font-weight: 500;
+  }
+  
+  .submit {
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    background: rgba(225, 225, 225, 0.7);
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .submit:hover {
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  .left {
+    display: flex;
+  }
+  
+  .left .check{
+    font-family: montserrat;
+    font-weight: 500;
+  }
+
+  label a {
+    color: #fff;
+    text-decoration: none;
+    font-family: montserrat;
+    font-weight: 500;
+  }
+
+  /*----MEDIA QUERIES----*/
+
+  @media screen and (max-width:0){
+    body{
+      background: #000;
+    } 
+  }
