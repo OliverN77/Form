@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,56 @@
   <link rel="stylesheet" href="fonts.css">
   <title>Requerimeinto Tecnico</title>
 </head>
+
 <body>
-    <div class="box">
-      <div class="container">
-        <div class="top-header">
-          <span>Sign up</span>
-          <header>Registrate</header>
-        </div>
-        <div class="input-field">
-          <input type="text" class="input" placeholder="Nombre completo" required>
-
-        </div>
-        <div class="input-field">
-          <input type="text" class="input" placeholder="Correo electronico" required>
-
-        </div>
-        <div class="input-field">
-          <input type="password" class="input" placeholder="Contraseña" required>
-
-        </div>
-        <div class="input-field">
-          <input type="password" class="input" placeholder="Confirmar tu Contraseña" required>
-
-        </div>
-        <div class="input-field">
-          <input type="submit" class="value" value="Iniciar Sesion">
-        </div>
-
-        <div class="bottom">
-          <div class="left">
-            <input type="checkbox" id="check">
-            <label for="check" class="check">Recordarme</label>
-          </div>
-          <div class="rigth">
-            <label><a href="#">¿Olvidaste tu contraseña?</a></label>
-          </div>
-        </div>
-      </div>
+    
+  <div class="container" id="container">
+    <div class="form-container sign-up-container" class="sign-up-form">
+        <form action="http://localhost:3000/registro" method="post">
+            <h1>Create Account</h1>
+            <span>or use your email for registration</span>
+            <input type="text"  name="nombre" placeholder="Name" />
+            <input type="text"  name="apellido" placeholder="Last name" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="contraseña" placeholder="Password" />
+            <input type="password" placeholder="Confirm Password"/>
+            <button type="submit"> Sign Up</button>
+        </form>
     </div>
+    <div class="form-container sign-in-container">
+        <form action="http://localhost:3000/ingreso" class="sign-in-form" method="post">
+            <div id="error-message"></div>
+            <h1>Sign in</h1>
+            <span>or use your account</span>
+            <input type="email" name="email" placeholder="Email" />
+            <input type="password" name="contraseña" placeholder="Password" />
+            <a href="#">Forgot your password?</a>
+            
+            <button type="submit">Sign In</button>
+        </form>
+
+        <% if (error) { %>
+            <p><%= error %></p>
+          <% } %>
+
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
